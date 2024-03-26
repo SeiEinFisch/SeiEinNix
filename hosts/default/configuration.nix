@@ -14,12 +14,12 @@
   nix.settings.experimental-features = ["nix-command" "flakes"]; 
 
   # Bootloader.
-  #boot.loader.systemd-boot.enable = true;
-  boot.loader.grub.enable = true;
+  boot.loader.systemd-boot.enable = true;
+  #boot.loader.grub.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.efi.efiSysMountPoint ="/boot";
+  #boot.loader.efi.efiSysMountPoint ="/boot";
   boot.loader.grub.efiSupport= true;
-  boot.loader.grub.device = "nodev";
+  #boot.loader.grub.device = "nodev";
   #boot.loader.grub.useOSProber = true;
 
   boot.initrd.luks.devices."luks-1a367a2c-a7cd-40a8-b2f5-64f7540cd407".device = "/dev/disk/by-uuid/1a367a2c-a7cd-40a8-b2f5-64f7540cd407";
