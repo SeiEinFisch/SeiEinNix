@@ -1,0 +1,2 @@
+# SeiEinNix
+personal nixos config
