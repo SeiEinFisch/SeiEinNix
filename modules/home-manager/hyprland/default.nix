@@ -37,11 +37,14 @@
       "$launcher" = "rofi -show drun";
       "$fileManager" = "nautilus";
 
-      #exec-once = [
+      exec-once = [
         #"hyprpaper"
         #"ags"
         #"mako"
-      #];
+        "dunst"
+        "waybar"
+      ];
+      
 
       
       monitor = ",preferred,auto,1";
@@ -69,6 +72,8 @@
         "$mainMod, f, exec, $browser"
         "$mainMod, d, exec, $launcher"
         "$mainMod, e, exec, $fileManager"
+        "$mainMod, l, exec, hyprlock"
+        
 
         # toggle floating window
         "$mainMod, v, togglefloating"
