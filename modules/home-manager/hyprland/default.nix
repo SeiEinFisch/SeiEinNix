@@ -46,12 +46,16 @@
       
       monitor = ",preferred,auto,1";
 
-      #input = {
+      input = {
+        kb_layout = "de";
+        touchpad {
+          natural_scroll = "no";
+        };
       #  sensitivity = "-0.25";
       #  accel_profile = "flat";
 
         # follow_mouse = "2";
-      #};
+      };
 
       # device = {
       #   "elan1300:00-04f3:3057-touchpad".enabled = "false";
