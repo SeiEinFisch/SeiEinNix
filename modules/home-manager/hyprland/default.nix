@@ -4,11 +4,11 @@
   inputs,
   ...
 }: {
-  #imports = [
-  #  ./hyprlock.nix
+  imports = [
+    ./hyprlock.nix
   #  ./hyprpaper.nix
   #  ./hyprpicker.nix
-  #];
+  ];
 
   #home.packages = with pkgs; [
   #  # screen capturing
@@ -48,7 +48,7 @@
 
       input = {
         kb_layout = "de";
-        touchpad {
+        touchpad = {
           natural_scroll = "no";
         };
       #  sensitivity = "-0.25";
@@ -65,7 +65,7 @@
 
       bind = [
         # apps
-        "$mainMod, return, exec, $terminal"
+        "$mainMod, t, exec, $terminal"
         "$mainMod, f, exec, $browser"
         "$mainMod, d, exec, $launcher"
         "$mainMod, e, exec, $fileManager"
