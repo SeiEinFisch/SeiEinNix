@@ -15,6 +15,7 @@
         display-filebrowser = " FileBrowser";
         sidebar-mode = true;
     };
-   }
+    theme = ./theme.rafi;
+   };
 
 }
