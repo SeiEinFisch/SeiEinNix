@@ -3,10 +3,10 @@
   imports = [
     ./bootloader
     ./gnome
-    ./hyprland
+    #./hyprland
     ./locale
     ./networking
     ./packages
     ./sound
-  ]
+  ];
 }
