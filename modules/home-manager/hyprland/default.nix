@@ -6,6 +6,7 @@
 }: {
   imports = [
     ./hyprlock.nix
+    ./waybar.nix
   #  ./hyprpaper.nix
   #  ./hyprpicker.nix
   ];
