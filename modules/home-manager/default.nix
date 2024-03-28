@@ -3,6 +3,7 @@
   ./git
   ./hyprland
   ./rofi
+  ./shell
   ];
   
 }

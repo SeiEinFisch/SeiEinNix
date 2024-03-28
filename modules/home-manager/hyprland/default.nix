@@ -7,7 +7,7 @@
   imports = [
     ./hyprlock.nix
     ./waybar.nix
-  #  ./hyprpaper.nix
+    ./hyprpaper.nix
   #  ./hyprpicker.nix
   ];
 
@@ -39,7 +39,7 @@
       "$fileManager" = "nautilus";
 
       exec-once = [
-        #"hyprpaper"
+        "hyprpaper"
         #"ags"
         #"mako"
         "dunst"
