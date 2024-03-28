@@ -14,6 +14,8 @@
      vscode
      tree
      neofetch
+     obsidian
+     dropbox
      
      waybar
      dunst
