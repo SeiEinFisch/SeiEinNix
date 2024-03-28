@@ -12,6 +12,6 @@
 
   #zsh shell for all users
   users.defaultUserShell = pkgs.zsh;
-  enviroment.shells = with pkgs; [zsh];
+  #enviroment.shells = with pkgs; [zsh];
   programs.zsh.enable = true;
 }

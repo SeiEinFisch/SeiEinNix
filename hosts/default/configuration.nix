@@ -15,8 +15,6 @@
   #flake
   nix.settings.experimental-features = ["nix-command" "flakes"]; 
 
-
-
   boot.initrd.luks.devices."luks-1a367a2c-a7cd-40a8-b2f5-64f7540cd407".device = "/dev/disk/by-uuid/1a367a2c-a7cd-40a8-b2f5-64f7540cd407";
   
 
