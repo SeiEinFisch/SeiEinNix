@@ -4,6 +4,7 @@
   ./hyprland
   ./rofi
   ./shell
+  ./kitty
   ];
   
 }

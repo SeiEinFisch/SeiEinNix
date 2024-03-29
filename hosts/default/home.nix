@@ -1,9 +1,12 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs,... }:
 
 {
   imports = [
     ../../modules/home-manager
+    inputs.nix-colors.homeManagerModules.default
   ];
+
+  colorScheme = inputs.nix-colors.colorSchemes.gruvbox-dark-medium;
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "sei";
