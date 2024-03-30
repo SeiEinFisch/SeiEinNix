@@ -6,7 +6,7 @@
     inputs.nix-colors.homeManagerModules.default
   ];
 
-  colorScheme = inputs.nix-colors.colorSchemes.gruvbox-dark-medium;
+  colorScheme = inputs.nix-colors.colorSchemes.rose-pine;
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "sei";

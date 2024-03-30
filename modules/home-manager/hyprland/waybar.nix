@@ -1,6 +1,6 @@
-{...}:
+{config,...}:
 {
-    programs.waybar = {
+    programs.waybar = with config.colorScheme.palette;{
         enable = true;
         #systemd = {
         #    enable = false;
