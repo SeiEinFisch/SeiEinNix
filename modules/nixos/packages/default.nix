@@ -15,7 +15,9 @@
      tree
      neofetch
      obsidian
-     dropbox
+     maestral
+     maestral-gui
+     
      
      waybar
      dunst
