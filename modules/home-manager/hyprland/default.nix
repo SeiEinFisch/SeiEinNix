@@ -47,8 +47,18 @@
       ];
       
 
+      #main monitor
+      #monitor left position from top left corner
+      # name, resolution(and frequency), position from top left corner, scale
+      monitor =
+        [ 
+      "eDP-1,preferred,1920x0,1"
+      "HDMI-A-1,preferred,0x0,1"
       
-      monitor = ",preferred,auto,1";
+      #monitor right
+      #"eDP-1,preferred,0x0,1"
+      #"HDMI-A-1,preferred,1920x0,1"
+        ];
 
       input = {
         kb_layout = "de";
