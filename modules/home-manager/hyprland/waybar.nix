@@ -12,18 +12,22 @@
 
             modules-left = [
                 "custom/launcher"
-                "hyperland/workspaces"
+                "hyprland/workspaces"
             ];
             modules-center = [
+                "hyprland/window"
                 "clock"
             ];
             modules-right = [
                 "pulseaudio"
+                "pulseaudio/slider"
                 "backlight"
+                "backlight/slider"
                 "cpu"
 				"memory"
                 "network"
 				"bluetooth"
+                "battery"
                 "custom/powermenu"
                 "tray"
             ];
@@ -37,10 +41,19 @@
                     "3" = "[]";
                 };
                 format-icons = {
+                    "1" = "[1]";
+                    "2" = "[2]";
+                    "3" = "[3]";
+                    "4" = "[4]";
+                    "5" = "[5]";
+                    "6" = "[6]";
+                    "7" = "[7]";
+                    "8" = "[8]";
+                    "9" = "[9]";
                     ##todo add icons
-                    "active" = "  ";
-                    "default" = "  ";
-                    "empty" = "  ";
+                    "active" = "act";
+                    #"default" = " def ";
+                    #"empty" = " emp ";
                 };
             };
             "custom/launcher" = {
@@ -49,7 +62,7 @@
                 "tooltip" = false;
             };
             "pulseaudio" = {
-                "scroll-step" = 1;
+                "scroll-step" = 5;
                 "format" = "{icon} {volume}%";
                 "format-muted" = "󰖁 Muted";
                 "format-icons" = {
@@ -58,11 +71,21 @@
                 "on-click" = "pamixer -t";
                 "tooltip" = false;
             };
+            "pulseaudio/slider" = {
+                "min" = "0";
+                "max" = "100";
+                "orientation" = "vertical";
+            };
+            "backlight/slider" = {
+                "min" = "0";
+                "max" = "100";
+                "orientation" = "vertical";
+            };
             "bluetooth" = {
-			    "format-off"= "󰂲";
-				"on-click" = "rofi-bluetooth &";
-				"format"= "";
-	        "format-connected"= "";
+			    "format-off"= "bt off";
+				"on-click" = "blueman &";
+				"format"= "bt on";
+	        "format-connected"= "bt connected";
             };
             "clock" = {
                 "interval" = 1;
@@ -72,25 +95,28 @@
             };
             "memory" = {
                 "interval" = 1;
-                "format" = "󰻠 {percentage}%";
+                "format" = "memory {percentage}%";
                 "states" = {
                 "warning" = 85;
                 };
             };
             "cpu" = {
                 "interval" = 1;
-                "format" = "󰍛 {usage}%";
+                "format" = "cpu {usage}%";
+            };
+            "battery" = {
+              "format" = "{capacity} %";  
             };
             "network" = {
-                "format-disconnected" = "󰯡 ";
-                "format-ethernet" = "󰒢 ";
-                "format-linked" = "󰖪 {essid}";
-                "format-wifi" = "󰖩";
-                        "on-click"= "~/.config/waybar/scripts/rofi-network-manager.sh";
+                "format-disconnected" = "no wifi ";
+                "format-ethernet" = "eth ";
+                "format-linked" = "wifi {essid}";
+                "format-wifi" = "wifi";
+                #"on-click"= "~/.config/waybar/scripts/rofi-network-manager.sh";
                 "interval" = 1;
             };
             "custom/powermenu" = {
-                "format" = "";
+                "format" = "powermenu";
                 "on-click" = "zsh -c wlogout";
                 "tooltip" = false;
             };
