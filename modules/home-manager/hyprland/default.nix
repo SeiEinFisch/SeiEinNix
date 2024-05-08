@@ -63,7 +63,7 @@
       input = {
         kb_layout = "de";
         touchpad = {
-          natural_scroll = "no";
+          natural_scroll = "yes";
         };
       #  sensitivity = "-0.25";
       #  accel_profile = "flat";
@@ -75,7 +75,24 @@
       #   "elan1300:00-04f3:3057-touchpad".enabled = "false";
       # };
 
-    
+      general = {
+        gaps_in = "4";
+        gaps_out = "8";
+
+        layout = "dwindle";
+      };
+      
+      decoration = {
+        rounding = "8";
+        drop_shadow = "false";
+
+        blur = {
+          enabled = "true";
+          size = "8";
+          passes = "4";
+          popups = "true";
+          };
+      };
 
       bind = [
         # apps

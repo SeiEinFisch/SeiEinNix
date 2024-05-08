@@ -17,7 +17,8 @@
      obsidian
      maestral
      maestral-gui
-     
+     libreoffice-qt
+     ungoogled-chromium
      
      waybar
      dunst
