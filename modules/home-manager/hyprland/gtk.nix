@@ -1,9 +1,9 @@
-{config,...}:
+{pkgs,config,...}:
 {
     gtk = {
       enable = true;
       theme = {
-        name = "Catppuccin-Macchiato";
+        name = "Catppuccin-Macchiato-Compact-Pink-Dark";
         package = pkgs.catppuccin-gtk.override {
           accents = [ "pink" ];
           size = "compact";

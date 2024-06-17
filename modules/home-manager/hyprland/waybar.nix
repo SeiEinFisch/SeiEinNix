@@ -30,7 +30,7 @@
       border-radius: 6px 20px 20px 6px;
     }
     #custom-rofi {
-      background: #f5bde6;
+      background: #731cff;
       color: #24273a;
       border-radius: 24px;
       border-color: #24273a;
@@ -39,7 +39,7 @@
       font-size: 30;
     }
     #workspaces button.active, #taskbar button.active {
-      background: #f5bde6;
+      background: #731cff;
       color: #24273a;
       border-radius: 12px;
       border-color: #24273a;
@@ -56,7 +56,7 @@
         spacing = 2;
         modules-left = [ "custom/rofi" "hyprland/workspaces" "wlr/taskbar"];
         modules-center = [ "hyprland/window" "mpris" ];
-        modules-right = [  "bluetooth" "network" "wireplumber" "battery" "backlight" "clock"  ];
+        modules-right = [  "tray" "bluetooth" "network" "wireplumber" "battery" "backlight" "clock"  ];
         "hyprland/workspaces" = {
           format = "{icon}";
         };
@@ -79,10 +79,12 @@
           interval = 15;
         };
         clock = {
-          format = "{:%H.%M}";
+          interval = 1;
+          format = "{:%H:%M %b %d}";
           tooltip = true;
-          tooltip-format = "{:%Y-%m-%d}";
-          timezone = "America/New_York";
+          tooltip-format = "{:%A; %d %B %Y}\n<tt>{calendar}</tt>";
+          timezone = "Europe/Berlin";
+          
         };
         wireplumber = {
           format = "{icon}";
@@ -120,6 +122,10 @@
           tooltip-format="{percent}%";
           format-icons = ["󰃜" "󰃛" "󰃚"  "󰃞" "󰃟" "󰃝" "󰃠"];
         };
+        tray = {
+            icon-size = 15;
+            spacing = 5;
+          };
       };
     };
   };
