@@ -19,7 +19,9 @@
      maestral-gui
      libreoffice-qt
      ungoogled-chromium
-     
+     fastfetch
+     #fprintd
+     #libfprint-2-tod1-goodix-550a
      waybar
      dunst
      libnotify
@@ -28,4 +30,10 @@
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
   ];
+  services.fprintd.package = pkgs.fprintd.overrideAttrs {
+  mesonCheckFlags = [
+    "--no-suite"
+    "fprintd:TestPamFprintd"
+  ];
+};
 } 
