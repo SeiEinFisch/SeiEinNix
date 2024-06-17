@@ -6,29 +6,39 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+     # Mostly console commandsc and similar
      gedit
      wget
      kitty
+     tree
+     neofetch
+     fastfetch
+     util-linux
+     # applications
      discord
      spotify
      vscode
-     tree
-     neofetch
      obsidian
      maestral
      maestral-gui
      libreoffice-qt
      ungoogled-chromium
      floorp
-     fastfetch
-     util-linux
-     #fprintd
-     #libfprint-2-tod1-goodix-550a
+     vlc
+     # DM stuff
      hypridle
      waybar
      dunst
      libnotify
      rofi-wayland
+     networkmanagerapplet
+     wl-clipboard
+     swww
+     brightnessctl
+     helvum
+     pavucontrol
+     # Customization
+     nerdfonts fira-code-nerdfont
      
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget

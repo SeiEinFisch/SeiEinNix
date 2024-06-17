@@ -1,6 +1,5 @@
 {config,...}:
 {
-    
     programs.waybar = with config.colorScheme.palette;{
     enable = true;
     style = ''
@@ -50,13 +49,13 @@
     settings =  {
       mainBar = {
         layer = "top";
-        position = "top";
+        position = "bottom";
         margin = "4px";
-        height = 40;
+        height = 48;
         spacing = 2;
         modules-left = [ "custom/rofi" "hyprland/workspaces" "wlr/taskbar"];
         modules-center = [ "hyprland/window" "mpris" ];
-        modules-right = [  "bluetooth" "network" "wireplumber" "battery" "backlight" "clock"  ];
+        modules-right = [  "bluetooth" "network" "custom/vpn" "wireplumber" "battery" "backlight" "clock"  ];
         "hyprland/workspaces" = {
           format = "{icon}";
         };

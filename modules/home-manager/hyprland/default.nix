@@ -8,6 +8,7 @@
     ./hyprlock.nix
     ./waybar.nix
     ./hyprpaper.nix
+    ./gtk.nix
   #  ./hyprpicker.nix
   ];
 
@@ -74,18 +75,32 @@
       # device = {
       #   "elan1300:00-04f3:3057-touchpad".enabled = "false";
       # };
-
+      animations = {
+        enabled = "yes";
+        bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
+        animation = [
+          "windows, 1 ,7, myBezier, slide"
+          "border, 1, 10, default"
+          "borderangle, 1, 8, default"
+          "workspaces, 1, 6, default"
+        
+        ];
+      };
       general = {
         gaps_in = "4";
         gaps_out = "8";
 
         layout = "dwindle";
+        "col.active_border" = "rgba(f5bde6ff) rgba(f5bde6ff) 45deg";
+        "col.inactive_border" = "rgba(363a4fff)";
       };
       
       decoration = {
         rounding = "8";
-        drop_shadow = "false";
-
+        drop_shadow = "yes";
+        "col.shadow" = "rgba(1a1a1a00)";
+        inactive_opacity = 0.9;
+        shadow_range = 4;
         blur = {
           enabled = "true";
           size = "8";

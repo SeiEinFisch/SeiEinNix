@@ -5,7 +5,7 @@
 }: let
   homeDir = config.home.homeDirectory;
   sattyConfigPath = "${homeDir}/.config/satty/config.toml";
-  sattyFileName = "${config.screenshotsDir}/satty-%H-%M-%S_%d-%m-%Y.png";
+  sattyFileName = "${homeDir}/Screenshots/satty-%H-%M-%S_%d-%m-%Y.png";
 in {
   home.packages = with pkgs; [
     grim
