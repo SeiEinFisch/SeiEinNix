@@ -5,6 +5,7 @@
   ./rofi
   ./shell
   ./kitty
+  ./screenshot
   ];
   
 }

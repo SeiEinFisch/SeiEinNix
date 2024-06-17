@@ -19,9 +19,12 @@
      maestral-gui
      libreoffice-qt
      ungoogled-chromium
+     floorp
      fastfetch
+     util-linux
      #fprintd
      #libfprint-2-tod1-goodix-550a
+     hypridle
      waybar
      dunst
      libnotify

@@ -65,8 +65,8 @@
         touchpad = {
           natural_scroll = "yes";
         };
-      #  sensitivity = "-0.25";
-      #  accel_profile = "flat";
+        sensitivity = "-0.1";
+        accel_profile = "flat";
 
         # follow_mouse = "2";
       };
@@ -146,15 +146,12 @@
         "$mainMod, mouse_up, workspace, e-1"
 
         # screenshotting
-        ", print, exec, grim - | wl-copy"
-        "CTRL, print, exec, grim -g \"$(slurp)\" - | wl-copy"
-        "ALT, print, exec, grim -g \"$(slurp)\" - | swappy -f -"
-
-        # colorpicker
-        "$mainMod SHIFT, c, exec, hyprpicker -a"
-
-        # obs studio pass
-        "$mainMod, F6, pass, ^(com\.obsproject\.Studio)$"
+        ", PRINT, exec, grimblast copysave screen"
+        "CTRL, PRINT, exec, grimblast copysave area"
+        "ALT, PRINT, exec, grimblast save area - | satty -f -"
+        "SHIFT, PRINT, exec, grimblast copysave active"
+      
+        
       ];
 
       bindm = [
