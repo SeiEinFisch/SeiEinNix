@@ -26,7 +26,7 @@
     pkgs.hello
 
   ];
-
+  
 
   home.sessionVariables = {
     # EDITOR = "emacs";

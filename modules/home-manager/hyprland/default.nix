@@ -35,7 +35,7 @@
       "$mainMod" = "SUPER";
       "$terminal" = "kitty";
       "$editor" = "gedit";
-      "$browser" = "firefox";
+      "$browser" = "floorp";
       "$launcher" = "rofi -show drun";
       "$fileManager" = "nautilus";
 
@@ -115,7 +115,7 @@
         "$mainMod, f, exec, $browser"
         "$mainMod, d, exec, $launcher"
         "$mainMod, e, exec, $fileManager"
-        "$mainMod, l, exec, hyprlock"
+        "$mainMod, l, exec, hyprlock | systemctl suspend"
         
 
         # toggle floating window
@@ -175,15 +175,20 @@
         "$mainMod, mouse:273, resizewindow"
       ];
 
-      binde = [
-        # pipewire volume control
-        ", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+      bindle = [
+        ", XF86MonBrightnessUp, exec, brightnessctl s +5%"
+        ", XF86MonBrightnessDown, exec, brightnessctl s 5%-"
+        ", XF86Search, exec, launchpad"
+      ];
+      bindel = [
+        ", XF86AudioRaiseVolume, exec, wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%+"
         ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+      ];
+      bindl = [
         ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
-
-        # brightness control
-        #", XF86MonBrightnessDown, exec, brightnessctl set 5%-"
-        #", XF86MonBrightnessUp, exec, brightnessctl set +5%"
+        ", XF86AudioPlay, exec, playerctl play-pause # the stupid key is called play , but it toggles "
+        ", XF86AudioNext, exec, playerctl next "
+        ", XF86AudioPrev, exec, playerctl previous"
       ];
     };
   };

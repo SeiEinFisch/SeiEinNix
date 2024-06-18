@@ -87,7 +87,7 @@
           
         };
         wireplumber = {
-          format = "{icon}";
+          format = "{volume}% {icon}";
           tooltip-format = "{node_name} {volume}%";
           format-muted = "󰝟";
           format-icons = ["" "" ""];
@@ -112,9 +112,14 @@
           tooltip-device-enumerate-connected = "{device_alias}";
         };
         battery = {
-          format = " {icon}";
+          states = {
+            good = 95;
+            warning = 20;
+            critical = 10;
+          };
+          format = "{capacity}% {icon}";
           tooltip-format = "{capacity}%";
-          format-charging = "{icon}󱐋";
+          format-charging = "{capacity}% {icon}󱐋";
           format-icons = ["󰂃" "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󱟢"];
         };
         backlight = {
@@ -126,6 +131,39 @@
             icon-size = 15;
             spacing = 5;
           };
+        "group/group-power" = {
+          orientation = "inherit";
+          drawer = {
+            transition-duration = 500;
+            transition-left-to-right = false;
+          };
+          modules = [
+            "custom/power"
+            "custom/quit"
+            "custom/lock"
+            "custom/reboot"
+          ];
+        };
+        "custom/quit" = {
+          format = "󰗼";
+          #on-click = "${pkgs.hyprland}/bin/hyprctl dispatch exit";
+          tooltip = false;
+        };
+        "custom/lock" = {
+          format = "󰍁";
+          #on-click = "${pkgs.hyprlock}";
+          tooltip = false;
+        };
+        "custom/reboot" = {
+          format = "󰜉";
+          #on-click = "${pkgs.systemd}/bin/systemctl reboot";
+          tooltip = false;
+        };
+        "custom/power" = {
+          format = "";
+          #on-click = "${pkgs.systemd}/bin/systemctl poweroff";
+          tooltip = false;
+        };
       };
     };
   };
