@@ -40,7 +40,10 @@
       "$fileManager" = "nautilus";
 
       exec-once = [
-        "hyprpaper"
+        #"hyprpaper"
+        "swww init"
+        #todo as it is very wacky
+        "swww img SeiEinNix/modules/home-manager/hyprland/wallpaper.png"
         #"ags"
         #"mako"
         "dunst"
@@ -87,8 +90,8 @@
         ];
       };
       general = {
-        gaps_in = "4";
-        gaps_out = "8";
+        gaps_in = "2";
+        gaps_out = "4";
 
         layout = "dwindle";
         "col.active_border" = "rgba(f5bde6ff) rgba(f5bde6ff) 45deg";

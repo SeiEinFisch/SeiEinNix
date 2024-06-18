@@ -30,7 +30,7 @@
       border-radius: 6px 20px 20px 6px;
     }
     #custom-rofi {
-      background: #731cff;
+      background: #8aadf4;
       color: #24273a;
       border-radius: 24px;
       border-color: #24273a;
@@ -39,9 +39,9 @@
       font-size: 30;
     }
     #workspaces button.active, #taskbar button.active {
-      background: #731cff;
+      background: #8aadf4;
       color: #24273a;
-      border-radius: 12px;
+      border-radius: 10px;
       border-color: #24273a;
       border: 4px solid;
     }
