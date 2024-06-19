@@ -56,7 +56,7 @@
         spacing = 2;
         modules-left = [ "custom/rofi" "hyprland/workspaces" "wlr/taskbar"];
         modules-center = [ "hyprland/window" "mpris" ];
-        modules-right = [  "tray" "bluetooth" "network" "wireplumber" "battery" "backlight" "clock"  ];
+        modules-right = [  "tray" "bluetooth" "network" "wireplumber" "battery" "backlight" "custom/exit" "clock"  ];
         "hyprland/workspaces" = {
           format = "{icon}";
         };
@@ -163,6 +163,11 @@
           format = "";
           #on-click = "${pkgs.systemd}/bin/systemctl poweroff";
           tooltip = false;
+        };
+        "custom/exit" = {
+          tooltip = false;
+          format = "";
+          on-click = "sleep 0.1 &&wlogout";
         };
       };
     };

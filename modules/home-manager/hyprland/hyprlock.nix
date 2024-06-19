@@ -1,8 +1,23 @@
-{inputs,...}:
+{inputs,config,...}:
 {
     imports = [inputs.hyprlock.homeManagerModules.default];
     programs.hyprlock = {
         enable = true;
+        backgrounds = [
+            {
+                #doesnt work
+                monitor = "";
+                path = "$HOME/SeiEinNix/modules/home-manager/hyprland/wallpaper.png";
+                color = "rgba(25,20,20,1.0)";
+                blur_passes = 4; # 0 disables blur
+                blur_size = 2;
+                noise = 0.0117;
+                contrast = 0.9;
+                brightness = 0.8;
+                vibrancy = 0.19;
+                vibrancy_darkness = 0.0;
+            }
+        ];
         input-fields = [
             {
                 size = {
@@ -17,7 +32,7 @@
                 dots_center = true;
                 position = {
                     x = 0;
-                    y = -80;
+                    y = -90;
                 };
                 halign = "center";
                 valign = "center";

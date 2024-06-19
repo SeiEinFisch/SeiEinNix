@@ -38,6 +38,7 @@
      brightnessctl
      helvum
      pavucontrol
+     wlogout
      # Customization
      nerdfonts fira-code-nerdfont
      
