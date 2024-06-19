@@ -16,7 +16,7 @@
      util-linux
      # applications
      discord
-     spotify
+     #spotify
      vscode
      obsidian
      maestral

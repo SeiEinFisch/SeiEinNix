@@ -11,6 +11,8 @@
 
     nix-colors.url = "github:misterio77/nix-colors";
 
+    spicetify.url = "github:the-argus/spicetify-nix";
+
     home-manager = {
        url = "github:nix-community/home-manager";
        inputs.nixpkgs.follows = "nixpkgs";
