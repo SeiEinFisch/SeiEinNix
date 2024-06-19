@@ -31,6 +31,7 @@
      dunst
      libnotify
      rofi-wayland
+     rofi-power-menu
      networkmanagerapplet
      wl-clipboard
      swww

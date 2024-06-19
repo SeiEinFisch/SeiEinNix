@@ -146,7 +146,7 @@
         };
         "custom/quit" = {
           format = "󰗼";
-          #on-click = "${pkgs.hyprland}/bin/hyprctl dispatch exit";
+          on-click = "rofi-power-menu";
           tooltip = false;
         };
         "custom/lock" = {
