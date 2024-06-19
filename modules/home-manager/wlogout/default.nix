@@ -15,29 +15,25 @@
                 text = "Shutdown";
                 keybind = "s";
             }
+            {
+                label = "lock";
+                action = "sleep 1; hyprlock";
+                text = "Lock";
+                keybind = "l";
+            }
+            {
+                label = "logout";
+                action = "hyperctl dispatch exit";
+                text = "Logout";
+                keybind = "e";
+            }
+            {
+                label = "hibernate";
+                action = "sleep 1; hyprlock; systemctl hibernate";
+                text = "Hibernate";
+                keybind = "h";
+            }
         ];
-        style = ''
-          button {
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size = 25%;
-            border-style:solid;
-            background-color: rgba(30,30,36,0,1)
-            border: 3px solid #ffffff
-            box-shadow: none
-            margin: 5px;
-            font-size = 20px;
-            color: #cdd6f4;
-          }
-
-          button:hover {
-            background-color: rgba(49,50,68,0.2);
-          }
-          button:focus {
-            background-color: #cba6f7;
-            color: #11111b;
-          }
-        '';
-        
     };
 }
+

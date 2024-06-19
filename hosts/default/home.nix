@@ -1,4 +1,4 @@
-{ config, pkgs, inputs,... }:
+{ config, pkgs, inputs,lib, ... }:
 
 {
   imports = [
@@ -27,7 +27,7 @@
 
   ];
   
-
+  nixpkgs.config.allowUnfree = true; 
   home.sessionVariables = {
     # EDITOR = "emacs";
   };
