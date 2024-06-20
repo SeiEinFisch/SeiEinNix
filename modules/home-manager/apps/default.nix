@@ -1,6 +1,7 @@
 {...}: {
   imports = [
   ./spotify
+  ./yazi
   ];
   
 }
