@@ -26,7 +26,10 @@
     pkgs.hello
 
   ];
-  
+  # area to remove later on 
+  services.network-manager-applet.enable = true;
+  services.blueman-applet.enable = true;
+
   nixpkgs.config.allowUnfree = true; 
   home.sessionVariables = {
     # EDITOR = "emacs";

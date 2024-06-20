@@ -29,6 +29,7 @@
     .modules-right > *:last-child {
       border-radius: 6px 20px 20px 6px;
     }
+
     #custom-rofi {
       background: #8aadf4;
       color: #24273a;
@@ -56,10 +57,12 @@
         spacing = 2;
         modules-left = [ "custom/rofi" "hyprland/workspaces" "wlr/taskbar"];
         modules-center = [ "hyprland/window" "mpris" ];
-        modules-right = [  "tray" "bluetooth" "network" "wireplumber" "battery" "backlight" "custom/exit" "clock"  ];
+        modules-right = [  "tray" "bluetooth" "network" "wireplumber" "battery" "backlight" "custom/exit" "clock"];
+      
         "hyprland/workspaces" = {
           format = "{icon}";
         };
+        
         "wlr/taskbar" = {
           on-click = "activate";
           icon-size = 18;

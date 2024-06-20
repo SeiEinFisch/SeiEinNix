@@ -118,8 +118,14 @@
         "$mainMod, f, exec, $browser"
         "$mainMod, d, exec, $launcher"
         "$mainMod, e, exec, $fileManager"
+
+        #lock system
         "$mainMod, l, exec, hyprlock | systemctl suspend"
-        
+
+        # toggle fullscreen
+        "$mainMod, o, exec, pkill -SIGUSR1 waybar" 
+        # reloads waybar
+        "$mainMod, p, exec, pkill -SIGUSR2 waybar" 
 
         # toggle floating window
         "$mainMod, v, togglefloating"
