@@ -46,7 +46,7 @@
         "swww img SeiEinNix/modules/home-manager/hyprland/wallpaper.png"
         #"ags"
         #"mako"
-        "dunst"
+        "mako"
         "waybar"
       ];
       

@@ -14,6 +14,7 @@
      neofetch
      fastfetch
      util-linux
+     
      # applications
      discord
      #spotify
