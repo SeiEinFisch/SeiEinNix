@@ -12,7 +12,7 @@
      kitty
      tree
      neofetch
-     #fastfetch
+     fastfetch
      util-linux
      cliphist
      # applications

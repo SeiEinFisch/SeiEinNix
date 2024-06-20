@@ -1,4 +1,5 @@
-{pkgs,...}:
+{pkgs,inputs,lib,...}:
+# doesnt work for now. Will keep using the nixpkg instead
 {
     programs.fastfetch = {
         enable = true;
@@ -7,12 +8,12 @@
             logo = {
                 type = "kitty-direct";
                 source = "~/Downloads/Elaina.jpg";
-                widht = 32;
+                width = 32;
                 height = 15;
             };
             display = {
                 seperator = " - ";
-                color = "blue";
+                #color = "blue";
             };
             modules = [
                 {
@@ -44,7 +45,7 @@
                 "colors"
 
             
-            ]
+            ];
         };
     };
 }

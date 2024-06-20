@@ -43,7 +43,7 @@
         #"hyprpaper"
         "swww init"
         #todo as it is very wacky
-        "swww img SeiEinNix/modules/home-manager/hyprland/wallpaper.png"
+        "swww img SeiEinNix/modules/home-manager/hyprland/wallpapers/Frieren_wallpaper"
         #"ags"
         #"mako"
         "mako"
@@ -96,7 +96,7 @@
         gaps_out = "4";
 
         layout = "dwindle";
-        "col.active_border" = "rgba(f5bde6ff) rgba(f5bde6ff) 45deg";
+        "col.active_border" = "rgba(8aadf4ff) rgba(8aadf4ff) 45deg";
         "col.inactive_border" = "rgba(363a4fff)";
       };
       
