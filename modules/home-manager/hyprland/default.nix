@@ -48,6 +48,8 @@
         #"mako"
         "mako"
         "waybar"
+        "wl-paste --type text --watch cliphist store"
+        "wl-paste --type image --watch cliphist store"
       ];
       
 
@@ -126,7 +128,8 @@
         "$mainMod, o, exec, pkill -SIGUSR1 waybar" 
         # reloads waybar
         "$mainMod, p, exec, pkill -SIGUSR2 waybar" 
-
+        
+        "$mainMod CTRL, v, exec, cliphist list |rofi -dmenu | cliphist decode | wl-copy"
         # toggle floating window
         "$mainMod, v, togglefloating"
 

@@ -12,9 +12,9 @@
      kitty
      tree
      neofetch
-     fastfetch
+     #fastfetch
      util-linux
-     
+     cliphist
      # applications
      discord
      #spotify
@@ -40,6 +40,7 @@
      helvum
      pavucontrol
      wlogout
+     ags
      # Customization
      nerdfonts fira-code-nerdfont
      
