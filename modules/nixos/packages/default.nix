@@ -11,10 +11,11 @@
      wget
      kitty
      tree
-     neofetch
+     #neofetch
      fastfetch
      util-linux
      cliphist
+     playerctl
      # applications
      discord
      #spotify

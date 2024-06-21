@@ -5,9 +5,10 @@
         enable = true;
         backgrounds = [
             {
-                #doesnt work
+                
                 monitor = "";
-                path = "$HOME/SeiEinNix/modules/home-manager/hyprland/wallpaper.png";
+                #path doesnt work
+                path = "/home/sei/SeiEinNix/modules/home-manager/hyprland/wallpapers/Frieren_wallpaper.jpg";
                 color = "rgba(25,20,20,1.0)";
                 blur_passes = 4; # 0 disables blur
                 blur_size = 2;

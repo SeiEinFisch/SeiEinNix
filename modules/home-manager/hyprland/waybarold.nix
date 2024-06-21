@@ -54,7 +54,7 @@
         height = 48;
         spacing = 2;
         modules-left = [ "custom/rofi" "hyprland/workspaces" "wlr/taskbar"];
-        modules-center = [ "hyprland/window" "mpris" ];
+        modules-center = [ "hyprland/window" ];
         modules-right = [  "bluetooth" "network" "custom/vpn" "wireplumber" "battery" "backlight" "clock"  ];
         "hyprland/workspaces" = {
           format = "{icon}";
@@ -76,6 +76,9 @@
           '';
           return-type = "json";
           interval = 15;
+        };
+        mpris = {
+          max-length = 30;
         };
         clock = {
           format = "{:%H.%M}";

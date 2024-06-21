@@ -9,6 +9,7 @@
             # update command
             shellAliases = {
                 nix-update = "sudo nixos-rebuild switch --flake /home/sei/SeiEinNix#default";
+                # neo fetch
                 neofetch = "clear | fastfetch";
             };
             oh-my-zsh = {

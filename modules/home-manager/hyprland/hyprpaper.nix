@@ -5,7 +5,7 @@
     ...
 }: let
     #set initial wallpaper
-    wallpaper = ./wallpaper.png;
+    wallpaper = ./wallpapers/Frieren_wallpaper.jpg;
     #define wallpaper path here
     wallpaperPath = "${config.home.homeDirectory}/.local/share/hyprpaper/${builtins.baseNameOf wallpaper}";
 in{
