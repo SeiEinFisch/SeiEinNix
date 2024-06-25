@@ -41,7 +41,8 @@
      helvum
      pavucontrol
      wlogout
-     ags
+     #ags
+     avizo
      # Customization
      nerdfonts fira-code-nerdfont
      

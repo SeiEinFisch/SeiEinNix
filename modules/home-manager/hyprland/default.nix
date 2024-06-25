@@ -41,6 +41,7 @@
 
       exec-once = [
         #"hyprpaper"
+        "avizo-service"
         "swww init"
         #todo as it is very wacky
         "swww img SeiEinNix/modules/home-manager/hyprland/wallpapers/Frieren_wallpaper"
@@ -50,6 +51,7 @@
         "waybar"
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
+
       ];
       
 
@@ -188,20 +190,20 @@
       ];
 
       bindle = [
-        ", XF86MonBrightnessUp, exec, brightnessctl s +5%"
-        ", XF86MonBrightnessDown, exec, brightnessctl s 5%-"
+        ", XF86MonBrightnessUp, exec, lightctl up"
+        ", XF86MonBrightnessDown, exec, lightctl down"
         ", XF86Search, exec, launchpad"
-        "CTRL SHIFT, F6, exec, brightnessctl s +5%"
-        "CTRL SHIFT, F5, exec, brightnessctl s 5%-"
+        "CTRL SHIFT, F6, exec, lightctl up"
+        "CTRL SHIFT, F5, exec, lightctl down"
       ];
       bindel = [
-        ", XF86AudioRaiseVolume, exec, wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%+"
-        ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
-        "CTRL SHIFT, F2, exec,  wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
-        "CTRL SHIFT, F3, exec, wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%+"
+        ", XF86AudioRaiseVolume, exec,volumectl -u up"
+        ", XF86AudioLowerVolume,exec,volumectl -u down"
+        "CTRL SHIFT, F2, exec,  volumectl -u down"
+        "CTRL SHIFT, F3, exec, volumectl -u up"
       ];
       bindl = [
-        ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+        ", XF86AudioMute, exec, volumectl toggle-mute"
         ", XF86AudioPlay, exec, playerctl play-pause # the stupid key is called play , but it toggles "
         ", XF86AudioNext, exec, playerctl next "
         ", XF86AudioPrev, exec, playerctl previous"
